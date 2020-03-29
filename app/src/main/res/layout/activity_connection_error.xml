@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".Activities.ConnectionErrorActivity">
+
+    <LinearLayout
+        android:id="@+id/noConnectionLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/noConnectionGif"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"/>
+
+        <TextView
+            android:paddingTop="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="خطا در اتصال به شبکه"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/gray800"
+            android:fontFamily="@font/vazir_bold"/>
+
+        <TextView
+            android:id="@+id/OpenSetting"
+            android:paddingTop="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تنظیمات شبکه"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/gray800"
+            android:fontFamily="@font/vazir_medium"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_wifi_tethering_black_24dp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:focusable="true"/>
+
+        <Button
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/TryAgain"
+            android:text="تلاش مجدد"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/vazir_bold"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/no_connection_button"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"/>
+
+
+</RelativeLayout>
