@@ -25,7 +25,7 @@ public class ConnectionErrorActivity extends AppCompatActivity {
     TextView openSetting;
     ImageView imageView;
     LinearLayout linearLayout;
-    String file = "file:android_asset/noConnection.gif";
+    String file = "file:android_asset/noConnection_resize.gif";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

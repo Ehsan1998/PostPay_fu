@@ -8,6 +8,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 
 import com.postpay.Activities.ConnectionErrorActivity;
+import com.postpay.Activities.GetPhoneNumberActivity;
 import com.postpay.Activities.HomePageActivity;
 
 import java.io.IOException;
@@ -57,7 +58,7 @@ public class Conection_Detector extends AsyncTask<String,Void,Integer> {
     protected void onPostExecute(Integer result) {
         if (isConnected()){
             if (result == 1){
-                Intent intent = new Intent(context, HomePageActivity.class);
+                Intent intent = new Intent(context, GetPhoneNumberActivity.class);
                 context.startActivity(intent);
             }
             if (result == 0){

@@ -6,4 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activities.VerificationCodeActivity">
 
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
