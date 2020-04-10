@@ -1,12 +1,15 @@
 package com.postpay.Activities;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import com.postpay.R;
@@ -19,8 +22,11 @@ public class GetPhoneNumberActivity extends AppCompatActivity {
     br.com.sapereaude.maskedEditText.MaskedEditText maskedEditText;
     Button button;
     private String phoneNumber;
+    private String maskedPhoneNumber;
     private String code = "09";
+    Window window;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +34,17 @@ public class GetPhoneNumberActivity extends AppCompatActivity {
 
         maskedEditText = (MaskedEditText) findViewById(R.id.phoneInput2);
         button = (Button) findViewById(R.id.phoneButton);
+        button.setEnabled(false);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnClicked();
             }
         });
+
+        window = this.getWindow();
+        window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+        window.getDecorView().setSystemUiVisibility(window.getDecorView().getSystemUiVisibility()| View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
         maskedEditText.addTextChangedListener(new TextWatcher() {
             @Override

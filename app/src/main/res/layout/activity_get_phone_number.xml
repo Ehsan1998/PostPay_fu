@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".Activities.GetPhoneNumberActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:text="شماره همراه"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:fontFamily="@font/vazir_bold"
-        android:textSize="@dimen/_12sdp"/>
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginTop="@dimen/_20sdp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +22,7 @@
         android:text="شماره همراه خود را جهت دریافت کد وارد نمایید"
         android:gravity="center"
         android:layout_gravity="center"
-        android:fontFamily="@font/vazir_medium"
+        android:fontFamily="@font/vazir"
         android:textColor="@color/gray500"
         android:layout_marginTop="@dimen/_40sdp"/>
 
@@ -38,6 +37,8 @@
         android:padding="@dimen/_10sdp"
         android:background="@drawable/edittext_border"
         android:inputType="phone"
+        android:textColor="@color/gray800"
+        android:textSize="16sp"
         android:typeface="monospace"
         app:allowed_chars="1234567890"
         app:mask="09## ### ####"

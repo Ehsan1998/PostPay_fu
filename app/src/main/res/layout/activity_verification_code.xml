@@ -4,19 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".Activities.VerificationCodeActivity">
 
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_40sdp">
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/phoneViewer"
+            app:maskIcon="@drawable/ic_local_phone_black_24dp"
+            android:fontFamily="@font/vazir_bold_fd"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:textSize="@dimen/_18sdp"
+            android:background="@color/colorAccent"
+            android:layout_gravity="center"
+            android:inputType="phone"
+            android:textColor="@color/gray800"
+            android:typeface="monospace"
+            app:mask="#### ### ####" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:clickable="true"
+            android:id="@+id/phoneEdit"/>
+
+
+    </LinearLayout>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:text="کد تایید"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="کد فعالسازی دریافت شده را وارد نمایید"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:fontFamily="@font/vazir_bold"
-        android:textSize="@dimen/_12sdp"/>
+        android:layout_gravity="center"
+        android:fontFamily="@font/vazir"
+        android:textColor="@color/gray500"
+        android:layout_marginTop="@dimen/_12sdp"/>
 
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_gravity="center"
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray700"
+        app:bar_active_color="@color/colorPrimary"
+        app:bar_success_color="@color/green500"
+        app:bar_error_color="@color/redA400"
+        app:height="40dp"
+        app:width="40dp"
+        app:bar_enabled="true"
+        app:bar_height="2dp"
+        app:length="6"
+        app:otp_text_size="24dp"/>
 
+    <Button
+        android:id="@+id/sendCodeAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/disable_button"
+        android:textColor="@color/gray700"
+        android:fontFamily="@font/vazir_medium_fd"
+        android:padding="@dimen/_6sdp"
+        android:enabled="false"/>
 
 
 </LinearLayout>

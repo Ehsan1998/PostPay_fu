@@ -18,6 +18,7 @@ import android.widget.ProgressBar;
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.Circle;
 import com.github.ybq.android.spinkit.style.DoubleBounce;
+import com.github.ybq.android.spinkit.style.Pulse;
 import com.postpay.Publics.Conection_Detector;
 import com.postpay.R;
 
@@ -42,8 +43,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         final ProgressBar progressBar = (ProgressBar) findViewById(R.id.splashSpinKit);
-        Sprite circle = new Circle();
-        progressBar.setIndeterminateDrawable(circle);
+        Sprite pulse = new Pulse();
+        progressBar.setIndeterminateDrawable(pulse);
 
         splashLogo = (ImageView) findViewById(R.id.splashLogo);
 

@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_100sdp"
-            android:src="@drawable/instagram_logo_eps_png_instagram_logo_512"
+            android:src="@drawable/logo_white"
             android:layout_gravity="center"
             android:id="@+id/splashLogo"/>
 
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/companyName"
-        style="@style/SpinKitView.Circle"
+        style="@style/SpinKitView.Pulse"
         android:layout_centerHorizontal="true"
         android:id="@+id/splashSpinKit"
         android:layout_marginBottom="@dimen/_8sdp"/>

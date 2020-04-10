@@ -17,6 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottomNavigation"
+        android:background="@color/colorAccent"
+        app:mbn_defaultIconColor="@color/gray500"
+        app:mbn_selectedIconColor="@color/colorPrimary"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
