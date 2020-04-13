@@ -72,6 +72,7 @@
         app:bar_error_color="@color/redA400"
         app:height="40dp"
         app:width="40dp"
+        style="@style/RobotoTextViewStyle"
         app:bar_enabled="true"
         app:bar_height="2dp"
         app:length="6"

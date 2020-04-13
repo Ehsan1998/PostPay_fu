@@ -3,12 +3,231 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragmens.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_240sdp"
+            android:background="@drawable/profile_backgroud">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/message"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logout_icon"
+                    android:clickable="true"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:id="@+id/editProfile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/edit"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:src="@drawable/user"
+                    android:id="@+id/profileImage"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="احسان کاتبی"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/vazir_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray900"
+                    android:id="@+id/username"/>
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    app:mask="#### ### ####"
+                    android:id="@+id/userPhoneNumber"
+                    android:textColor="@color/gray900"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/vazir_medium_fd"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingStart="@dimen/_32sdp"
+            android:paddingEnd="@dimen/_32sdp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/telegram_logo"
+                android:id="@+id/telLogo"
+                android:layout_marginEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/telLogo"
+                android:text="Arduino82"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/gray900"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:id="@+id/telId"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/instagram_logo"
+                android:id="@+id/instaLogo"
+                android:layout_toEndOf="@id/telId"
+                android:layout_marginEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/instaLogo"
+                android:text="E.K76"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/gray900"
+                android:id="@+id/instaId"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/website_logo"
+                android:id="@+id/webLogo"/>
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/siteAddress"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/webLogo"
+                android:text="www.EhsanKatebi.ir"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/gray900"
+                android:layout_marginStart="@dimen/_4sdp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="@drawable/text_view_border"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_16sdp">
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/vazir"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:background="@drawable/text_view_background"
+                android:layout_margin="1dp"
+                android:id="@+id/label1"
+                android:text="کد ملی"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toStartOf="@id/label1"
+                android:text="4570139876"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="@drawable/text_view_border"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_16sdp">
+
+            <TextView
+                android:id="@+id/label2"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:fontFamily="@font/vazir"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_view_background"
+                android:layout_margin="1dp"
+                android:text="شماره شبا"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toStartOf="@id/label2"
+                android:text="IR810180000000009825938874"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

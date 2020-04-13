@@ -3,12 +3,19 @@ package com.postpay.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.graphics.PostProcessor;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.postpay.Fragmens.AddFragment;
+import com.postpay.Fragmens.OrderFragment;
+import com.postpay.Fragmens.PaymentFragment;
+import com.postpay.Fragmens.PostFragment;
+import com.postpay.Fragmens.ProfileFragment;
 import com.postpay.R;
 
-public class HomePageActivity extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity{
 
     private final int ID_PROFILE = 1;
     private final int ID_ORDER = 2;
@@ -31,12 +38,64 @@ public class HomePageActivity extends AppCompatActivity {
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
+
+                Fragment selectedFragment = null;
+                switch (item.getId()){
+                    case ID_PROFILE:
+                        selectedFragment = new ProfileFragment();
+                        break;
+
+                    case ID_ORDER:
+                        selectedFragment = new OrderFragment();
+                        break;
+
+                    case ID_ADD:
+                        selectedFragment = new AddFragment();
+                        break;
+
+                    case ID_POST:
+                        selectedFragment = new PostFragment();
+                        break;
+
+                    case ID_PAYMENT:
+                        selectedFragment = new PaymentFragment();
+                        break;
+                }
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,selectedFragment).commit();
+
             }
         });
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
+
+                Fragment selectedFragment = null;
+                switch (item.getId()){
+                    case ID_PROFILE:
+                        selectedFragment = new ProfileFragment();
+                        break;
+
+                    case ID_ORDER:
+                        selectedFragment = new OrderFragment();
+                        break;
+
+                    case ID_ADD:
+                        selectedFragment = new AddFragment();
+                        break;
+
+                    case ID_POST:
+                        selectedFragment = new PostFragment();
+                        break;
+
+                    case ID_PAYMENT:
+                        selectedFragment = new PaymentFragment();
+                        break;
+                }
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,selectedFragment).commit();
+
             }
         });
 
@@ -47,6 +106,7 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
 
-        bottomNavigation.show(ID_ADD,false);
+        bottomNavigation.show(ID_PROFILE,false);
     }
+
 }
